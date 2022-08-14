@@ -1,0 +1,31 @@
+#include <stdio.h>
+/*#include <string.h>*/
+#include <stdlib.h>
+#include <share.h>
+
+//strlen strcpy strncpy strcat  strncat strcmp  strncmp strchr strrchr strstr  strstr
+
+int my_strlen(char *s)
+{
+	int i = 0;
+
+	while(*s != '\0')
+	{
+		i++;
+		s++;
+	}
+
+	return i;
+}
+int main(void)
+{
+	char buf[64];
+
+	GETLINES("please input string : ", buf);
+
+	printf("buf : %s\n", buf);
+
+	/*printf("strlen(buf) : %d\n", strlen(buf));*/
+	printf("my_strlen(buf) : %d\n", my_strlen(buf));
+	return 0;
+}
